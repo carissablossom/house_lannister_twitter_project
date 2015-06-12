@@ -19,19 +19,18 @@
 </head>
 <body>
 
-  <h1>Welcome to Wooter!</h1>
-
+  <a  href="/"><img id="title" src="http://i.imgur.com/NxFPn5X.png?1" /></a>
+  <div id="logging">
   <% if current_user %>
-    <!-- logout button  -->
     <form method="POST" action="/users/<%= current_user.id %>">
       <input type="hidden" name="_method" value="DELETE">
       <input type="submit" value="Logout">
     </form>
-    <a href="/">Home</a>
   <% else %>
     <a href="/signin">Sign In</a>
     <a href="/signup">Sign Up</a>
   <% end %>
+</div>
 
   <%= yield %>
 

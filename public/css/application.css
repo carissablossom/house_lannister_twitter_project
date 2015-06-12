@@ -1,3 +1,79 @@
 input {
   display: block;
 }
+
+li {
+  list-style-type: square;
+  line-height: 1.5em;
+}
+
+#woot_text {
+  display: inline;
+
+}
+
+#woot_button {
+  display: inline;
+  color: white;
+  background: #5891CB;
+}
+/*input[type=text]*/
+
+body {
+  margin: 50px;
+}
+
+.woot {
+  line-height: 2em;
+}
+
+.pages {
+  margin-left: 40px;
+}
+
+#pages {
+  padding: 5px;
+  color: white;
+}
+
+form.pages {
+  margin-top: 15px;
+  display: inline-block;
+}
+
+form.pages {
+  color: black;
+}
+
+#title {
+  color: black;
+  margin-bottom: 20px;
+}
+
+a {
+  color: #19356C;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+body {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+#logging {
+  float: right;
+  clear: both;
+  margin-bottom: 20px;
+}
+
+input[type=text] {
+  width: 200px;
+}
+
+.homes {
+  width: 200px;
+  padding: 3px;
+  margin-top: 20px;
+}

@@ -1,11 +1,19 @@
+
 <% @users.each do |user| %>
   <ul>
     <li>
       <a href="/users/<%= user.id %>">
         <%= user.username %>
-      </a><br>
-      <%= user.first_name %>
-      <%= user.last_name %>
+      </a>
+      <br>
+      <%=
+      if user.woots.any?
+        "=> #{user.woots.last.body} - #{woot_time(user.woots.last)}"
+      else
+        "No tweets..."
+      end %>
+      <br>
+        <strong><%= "#{user.first_name} #{user.last_name}" %></strong>
     </li>
   </ul>
 <% end %>
