@@ -1,4 +1,4 @@
-
+<% if @users.any? %>
 <% @users.each do |user| %>
   <ul>
     <li>
@@ -16,4 +16,7 @@
         <strong><%= "#{user.first_name} #{user.last_name}" %></strong>
     </li>
   </ul>
+<% end %>
+<% else %>
+<p> There's nobody here. **Crickets** Get out there and <a href="/"> Woot!</a></p>
 <% end %>
