@@ -5,7 +5,7 @@ get '/users' do
 end
 
 get '/users/:id' do
-  @id = params[:id]
+  @user = User.where(id: params[:id]).first
   erb :"users/show"
 end
 
@@ -30,7 +30,7 @@ put '/users/:id' do
   end
 end
 
-delete '/user/:id' do
+delete '/users/:id' do
   session[:user_id] = nil
   redirect '/'
 end

@@ -1,6 +1,12 @@
 <%
-potential_star = User.find(@id)
+potential_star = User.find(@user.id)
   unless current_user.stars.include?(potential_star)
 %>
-  <%= fan_button(@id) %>
+  <%= fan_button(@user.id) %>
+<% end %>
+
+<h2>Here's what <%= @user.first_name %> has been wooting:</h2>
+
+<% @user.woots.each do |woot| %>
+  <li class="woot"><%= "#{woot.body} - #{woot_time(woot)}" %></li>
 <% end %>

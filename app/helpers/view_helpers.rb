@@ -9,4 +9,8 @@ helpers do
     HTML
   end
 
+  def woot_time(woot)
+    woot.created_at.strftime("Wooted on %m/%d/%Y at %I:%M%p")
+  end
+
 end

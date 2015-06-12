@@ -5,10 +5,14 @@
         <%= user.username %>
       </a>
       <br>
-        => "<%= user.woots.last.body %>" -
-              <%= user.woots.last.created_at.strftime("Wooted on %m/%d/%Y at %I:%M%p") %>
+      <%=
+      if user.woots.any?
+        "=> #{user.woots.last.body} - #{woot_time(user.woots.last)}"
+      else
+        "No tweets..."
+      end %>
       <br>
-        <strong><%= user.first_name %> <%= user.last_name %></strong>
+        <strong><%= "#{user.first_name} #{user.last_name}" %></strong>
     </li>
   </ul>
 <% end %>

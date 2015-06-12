@@ -22,7 +22,6 @@
   <h1>Welcome to Wooter!</h1>
 
   <% if current_user %>
-    <!-- logout button  -->
     <form method="POST" action="/users/<%= current_user.id %>">
       <input type="hidden" name="_method" value="DELETE">
       <input type="submit" value="Logout">
