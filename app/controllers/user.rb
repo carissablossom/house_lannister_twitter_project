@@ -1,12 +1,15 @@
 get '/users' do
   @users = User.all
-  # "Hello Tastey"
   erb :"users/index"
 end
 
 get '/users/:id' do
-  @user = User.where(id: params[:id]).first
-  erb :"users/show"
+  if current_user
+    @user = User.where(id: params[:id]).first
+    erb :"users/show"
+  else
+    redirect '/'
+  end
 end
 
 get '/users/:id/stars' do
@@ -21,6 +24,7 @@ get '/users/:id/fans' do
 end
 
 put '/users/:id' do
+  # current_user.stars << @user.find(params[:id])
   @follow = Follow.new(fan_id: current_user.id, star_id: params[:id])
   if @follow.save
     redirect "/users/#{params[:id]}"
@@ -34,9 +38,3 @@ delete '/users/:id' do
   session[:user_id] = nil
   redirect '/'
 end
-
-get '/tanaysfood/:id' do
-  content_type :text
-  fan_button
-end
-

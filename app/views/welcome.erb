@@ -4,6 +4,20 @@
   <input id="woot_button" type="submit" value="WOOT!"/>
 </form>
 
+<div id="pages">
+<form class="pages" action="/users/<%= current_user.id %>">
+  <input type="submit" value="View your Profile">
+</form>
+
+<form class="pages" action="/users/<%= current_user.id %>/stars">
+  <input type="submit" value="See your Stars! ( <%= current_user.stars.count %> )">
+</form>
+
+<form class="pages"  action="/users/<%= current_user.id %>/fans">
+  <input type="submit" value="Check Out your Fans! ( <%= current_user.fans.count %> )" />
+</form>
+</div>
+
 <h2>Here's what your stars are up to...</h2>
 
 <%= erb :"users/_list" %>

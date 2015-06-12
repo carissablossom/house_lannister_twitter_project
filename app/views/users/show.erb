@@ -1,7 +1,4 @@
-<%
-potential_star = User.find(@user.id)
-  unless current_user.stars.include?(potential_star)
-%>
+<%unless current_user.stars.include?(User.find(@user.id))%>
   <%= fan_button(@user.id) %>
 <% end %>
 
