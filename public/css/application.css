@@ -1,3 +1,23 @@
 input {
   display: block;
 }
+
+li {
+  line-height: 1.5em;
+}
+
+#woot_text {
+  display: inline;
+
+}
+
+#woot_button {
+  display: inline;
+  color: white;
+  background: #5891CB;
+}
+/*input[type=text]*/
+
+body {
+  margin: 50px;
+}

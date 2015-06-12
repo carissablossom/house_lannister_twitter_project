@@ -3,9 +3,12 @@
     <li>
       <a href="/users/<%= user.id %>">
         <%= user.username %>
-      </a><br>
-      <%= user.first_name %>
-      <%= user.last_name %>
+      </a>
+      <br>
+        => "<%= user.woots.last.body %>" -
+              <%= user.woots.last.created_at.strftime("Wooted on %m/%d/%Y at %I:%M%p") %>
+      <br>
+        <strong><%= user.first_name %> <%= user.last_name %></strong>
     </li>
   </ul>
 <% end %>

@@ -1,0 +1,6 @@
+<%
+potential_star = User.find(@id)
+  unless current_user.stars.include?(potential_star)
+%>
+  <%= fan_button(@id) %>
+<% end %>
