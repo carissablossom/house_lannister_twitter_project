@@ -1,7 +1,7 @@
 
 <form method="POST" action="/welcome">
-  <input id="woot_text" type="text" name="body" placeholder="Can I get a WOOT?!" />
-  <input id="woot_button" type="submit" value="WOOT!"/>
+  <input id="woot_text" type="text" name="body" placeholder="Can I get a WOOT?!" >
+  <input id="woot_button" type="submit" value="WOOT!">
 </form>
 
 <div id="pages">
@@ -14,12 +14,19 @@
 </form>
 
 <form class="pages"  action="/users/<%= current_user.id %>/fans">
-  <input type="submit" value="Check Out your Fans! ( <%= current_user.fans.count %> )" />
+  <input type="submit" value="Check Out your Fans! ( <%= current_user.fans.count %> )" >
 </form>
 
 <form class="pages"  action="/users">
+<<<<<<< HEAD
+  <input type="submit" value="Check Out All Wooters! ( <%= User.all.count %> )" >
+</form>
+
+
+=======
   <input type="submit" value="Find More WOOTERS!" />
 </form>
+>>>>>>> 4f5dda523ccbe47f11d360782e9a6ede1ab9ff4b
 </div>
 
 <h2>Here's what your stars are up to...</h2>

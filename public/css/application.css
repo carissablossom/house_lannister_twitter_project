@@ -44,7 +44,7 @@ body {
 }
 
 .pages {
-  margin-left: 40px;
+  margin-left: 1px;
 }
 
 #pages {
@@ -92,6 +92,14 @@ input[type=text] {
   width: 200px;
   padding: 3px;
   margin-top: 20px;
+}
+
+
+.home_image {
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  margin-right: 23.5%;
 }
 
 input[type=submit] {
