@@ -107,3 +107,7 @@ input[type=submit] {
   background-color: #19356C;
   border: 0px;
 }
+
+#pw{
+  width: 200px;
+}
